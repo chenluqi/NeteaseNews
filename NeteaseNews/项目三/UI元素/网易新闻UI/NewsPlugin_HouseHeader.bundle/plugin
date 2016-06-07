@@ -1,0 +1,12 @@
+{
+    "id": "HouseHeader",
+    "entries": [
+        {
+            "type": "header",
+            "params": {
+                "desc":"新房、房价榜、二手房、直通车",
+                "tid":"T1348654085632"
+            }
+        }
+    ]
+}

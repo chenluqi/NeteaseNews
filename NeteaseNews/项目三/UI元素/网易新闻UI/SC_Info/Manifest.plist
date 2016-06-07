@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SinfPaths</key>
+	<array>
+		<string>SC_Info/NewsBoard.sinf</string>
+	</array>
+	<key>SinfReplicationPaths</key>
+	<array>
+		<string>PlugIns/TodayWidget.appex/SC_Info/TodayWidget.sinf</string>
+		<string>PlugIns/WatchKitExtension.appex/SC_Info/WatchKitExtension.sinf</string>
+		<string>SC_Info/NewsBoard.sinf</string>
+	</array>
+</dict>
+</plist>

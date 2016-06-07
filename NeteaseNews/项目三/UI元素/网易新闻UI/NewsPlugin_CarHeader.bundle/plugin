@@ -1,0 +1,13 @@
+{
+    "id": "CarHeader",
+    "entries": [
+        {
+            "type": "header",
+            "params": {
+                "desc":"汽车大全、购车指南、创新工场",
+                "tid": "T1348654060988",
+                "viewHeight": 61
+            }
+        }
+    ]
+}

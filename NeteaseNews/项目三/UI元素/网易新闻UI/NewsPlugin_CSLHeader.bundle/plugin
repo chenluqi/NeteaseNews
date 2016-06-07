@@ -1,0 +1,13 @@
+{
+    "id": "CSLHeader",
+    "entries": [
+        {
+            "type": "header",
+            "params": {
+                "desc":"中超赛程、赛事公告",
+                "tid": "T1348649503389",
+                "viewHeight": 61
+            }
+        }
+    ]
+}

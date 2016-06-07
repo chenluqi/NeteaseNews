@@ -1,0 +1,13 @@
+{
+    "id":"CommentHeader",
+    "entries": [
+        {
+            "type": "header",
+            "params": {
+                "desc":"跟贴策划、今日排行",
+                "tid": "T1419315959525",
+                "viewHeight" : 61
+            }
+        }
+    ]
+}

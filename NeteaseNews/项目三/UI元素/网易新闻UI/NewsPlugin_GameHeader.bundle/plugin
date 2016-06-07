@@ -1,0 +1,12 @@
+{
+    "id":"GameHeader",
+    "entries":[
+	{
+            "type":"header",
+            "params":{
+                "desc":"游戏中心、游戏直播",
+                "tid":"T1348654151579"
+            }
+        }
+    ]
+}

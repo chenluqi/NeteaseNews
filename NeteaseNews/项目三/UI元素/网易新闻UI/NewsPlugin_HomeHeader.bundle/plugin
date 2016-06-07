@@ -1,0 +1,13 @@
+{
+    "id": "HomeHeader",
+    "entries": [
+        {
+            "type": "header",
+            "params": {
+                "desc":"我来晒家、装修效果图",
+                "tid": "T1348654105308",
+                "viewHeight": 61
+            }
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "id":"NewsCalendar",
+    "entries":[
+        {
+            "type":"sidebarBlock",
+            "params":{
+                "title":"SideBar_Plugin_NewsCalendar",
+                "icon":"NPCAL_right_cell_history",
+                "icon_setting":"NPCAL_setting_cell_history",
+                "class":"message"
+            }
+        },
+        
+        {
+            "type":"content",
+            "params":{
+                "contentKey":"title"
+            }
+        }
+    ]
+}

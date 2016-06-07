@@ -1,0 +1,12 @@
+{
+    "id": "LocalNewsHeader",
+    "entries": [
+        {
+            "type": "header",
+            "params": {
+                "desc":"淘二手、二手房、找工作、租好车",
+                "tid":"T1419316531256"
+            }
+        }
+    ]
+}

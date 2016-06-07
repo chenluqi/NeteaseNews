@@ -1,0 +1,20 @@
+//
+//  PchFile.pch
+//  项目三
+//
+//  Created by Chrismith on 16/5/30.
+//  Copyright © 2016年 Chrismith. All rights reserved.
+//
+
+#ifndef PchFile_pch
+#define PchFile_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+
+
+
+#endif /* PchFile_pch */

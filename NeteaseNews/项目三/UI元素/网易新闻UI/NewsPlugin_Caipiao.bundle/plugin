@@ -1,0 +1,21 @@
+{
+    "id":"Caipiao",
+    "entries":[
+        {
+            "type":"sidebarBlock",
+            "params":{
+                "title":"彩票",
+                "icon":"icon",
+                "icon_setting":"icon",
+                "class":"helper"
+            }
+        },
+	{
+            "type":"header",
+            "params":{
+                "desc":"开奖号码、购彩大厅",
+                "tid":"T1356600029035"
+            }
+        }
+    ]
+}

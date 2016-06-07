@@ -1,0 +1,13 @@
+{
+    "id":"ReaderTopicHome",
+    "entries":[
+        {
+            "type":"link",
+            "params":{
+                "regex":[
+                    "http\\://.*\\.163\\.com/nc/qa/rss/default\\.html\\#/source/(T\\d{13})$"
+                ]
+            }
+        }
+    ]
+}

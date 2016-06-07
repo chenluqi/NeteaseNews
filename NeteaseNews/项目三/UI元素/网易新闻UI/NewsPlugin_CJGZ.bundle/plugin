@@ -1,0 +1,21 @@
+{
+    "id":"CJGZ",
+    "entries":[
+        {
+            "type":"header",
+            "params":{
+                "desc":"大盘指数",
+                "tid":"T1348648756099",
+                "viewHeight":85
+            }
+        },
+        {
+            "type":"link",
+            "params":{
+                "regex":[
+                    ".*\\.money\\.163\\.com/.*stock/.*\\.html$"
+                ]
+            }
+        }
+    ]
+}

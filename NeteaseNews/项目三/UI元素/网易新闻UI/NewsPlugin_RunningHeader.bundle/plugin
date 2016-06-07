@@ -1,0 +1,13 @@
+{
+    "id": "RunningHeader",
+    "entries": [
+        {
+            "type": "header",
+            "params": {
+                "desc":"跑步频道",
+                "tid": "T1411113472760",
+                "viewHeight": 61
+            }
+        }
+    ]
+}

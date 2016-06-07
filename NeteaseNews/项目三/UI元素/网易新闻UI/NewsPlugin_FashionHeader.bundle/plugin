@@ -1,0 +1,12 @@
+{
+    "id": "FashionHeader",
+    "entries": [
+        {
+            "type": "header",
+            "params": {
+                "desc":"美妆试用、星座运程",
+                "tid":"T1348650593803"
+            }
+        }
+    ]
+}

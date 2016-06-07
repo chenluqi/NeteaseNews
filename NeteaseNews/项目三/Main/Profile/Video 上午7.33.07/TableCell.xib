@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Kcell" rowHeight="102" id="OUa-4m-QXW" customClass="TableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="374" height="102"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OUa-4m-QXW" id="CV5-zf-N6m">
+                <rect key="frame" x="0.0" y="0.0" width="374" height="101"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OIo-pQ-ACz">
+                        <rect key="frame" x="15" y="15" width="74" height="72"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="72" id="FBv-WG-CHL"/>
+                            <constraint firstAttribute="width" constant="74" id="W1F-hr-MDE"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4VJ-aF-e0r">
+                        <rect key="frame" x="99" y="15" width="150" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="150" id="MqM-xU-Xgy"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XPm-HY-duT">
+                        <rect key="frame" x="99" y="48" width="100" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="05M-d1-7Tx"/>
+                            <constraint firstAttribute="width" constant="100" id="WtQ-fD-EDh"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPG-yR-SJ4">
+                        <rect key="frame" x="308" y="31" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="3H9-oS-mYm"/>
+                            <constraint firstAttribute="height" constant="40" id="zsw-jf-idb"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="4VJ-aF-e0r" firstAttribute="top" secondItem="OIo-pQ-ACz" secondAttribute="top" id="1Mj-BI-jQW"/>
+                    <constraint firstItem="OIo-pQ-ACz" firstAttribute="leading" secondItem="CV5-zf-N6m" secondAttribute="leadingMargin" constant="7" id="CVE-PB-u0O"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="qPG-yR-SJ4" secondAttribute="trailing" constant="18" id="K6N-0h-h6c"/>
+                    <constraint firstItem="XPm-HY-duT" firstAttribute="leading" secondItem="OIo-pQ-ACz" secondAttribute="trailing" constant="10" id="SK3-pA-OIK"/>
+                    <constraint firstItem="4VJ-aF-e0r" firstAttribute="leading" secondItem="OIo-pQ-ACz" secondAttribute="trailing" constant="10" id="Yrs-D3-pyj"/>
+                    <constraint firstItem="qPG-yR-SJ4" firstAttribute="centerY" secondItem="CV5-zf-N6m" secondAttribute="centerY" id="ZvL-d8-Pm6"/>
+                    <constraint firstItem="XPm-HY-duT" firstAttribute="top" secondItem="4VJ-aF-e0r" secondAttribute="bottom" constant="12" id="wSQ-vC-1b5"/>
+                    <constraint firstItem="OIo-pQ-ACz" firstAttribute="centerY" secondItem="CV5-zf-N6m" secondAttribute="centerY" id="zmg-nA-0eI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="themeAttentionButton" destination="qPG-yR-SJ4" id="6Qd-ly-emv"/>
+                <outlet property="themeImg" destination="OIo-pQ-ACz" id="BjP-Wo-zzz"/>
+                <outlet property="themeSoruceLabel" destination="XPm-HY-duT" id="vi8-P9-pMj"/>
+                <outlet property="themeTitleLabel" destination="4VJ-aF-e0r" id="bPM-0K-0zW"/>
+            </connections>
+            <point key="canvasLocation" x="-226" y="-202"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LargeCell" rowHeight="126" id="KGk-i7-Jjw" customClass="LargeCell">
+            <rect key="frame" x="0.0" y="0.0" width="337" height="126"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="337" height="125.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="标题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Way-4r-2mJ">
+                        <rect key="frame" x="8" y="8" width="321" height="19.5"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="来源" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fg5-2e-fXe">
+                        <rect key="frame" x="8" y="100" width="28" height="17"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="评论" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAt-OW-iO7">
+                        <rect key="frame" x="301" y="100" width="28" height="17"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pkl-bN-3uw">
+                        <rect key="frame" x="8" y="36" width="321" height="56"/>
+                        <animations/>
+                    </imageView>
+                </subviews>
+                <animations/>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="Pkl-bN-3uw" secondAttribute="trailing" id="8Jg-lG-Jc1"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="UAt-OW-iO7" secondAttribute="bottom" id="J6Q-8k-bWf"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="fg5-2e-fXe" secondAttribute="bottom" id="TeZ-Bo-RHE"/>
+                    <constraint firstItem="fg5-2e-fXe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Tz4-Uk-M5C"/>
+                    <constraint firstItem="Pkl-bN-3uw" firstAttribute="top" secondItem="Way-4r-2mJ" secondAttribute="bottom" constant="7.5" id="Wur-1y-AyG"/>
+                    <constraint firstItem="fg5-2e-fXe" firstAttribute="top" secondItem="Pkl-bN-3uw" secondAttribute="bottom" constant="8" id="dL0-o5-ghb"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="Pkl-bN-3uw" secondAttribute="leading" id="l74-nA-ZEh"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Way-4r-2mJ" secondAttribute="trailing" id="mLn-N9-30b"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="Way-4r-2mJ" secondAttribute="leading" id="obh-o4-QWt"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="UAt-OW-iO7" secondAttribute="trailing" id="r4l-Fx-4C2"/>
+                    <constraint firstAttribute="topMargin" secondItem="Way-4r-2mJ" secondAttribute="top" id="w5I-fG-VrC"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <connections>
+                <outlet property="commentsLabel" destination="UAt-OW-iO7" id="LoA-Ap-fnY"/>
+                <outlet property="iconImageView" destination="Pkl-bN-3uw" id="rfj-TY-FwN"/>
+                <outlet property="sourceLabel" destination="fg5-2e-fXe" id="9kQ-4C-qTC"/>
+                <outlet property="titleLabel" destination="Way-4r-2mJ" id="YLP-Io-Ves"/>
+            </connections>
+            <point key="canvasLocation" x="253.5" y="297"/>
+        </tableViewCell>
+    </objects>
+</document>

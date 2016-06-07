@@ -1,0 +1,12 @@
+{
+    "id": "BoBo",
+    "entries": [
+        {
+            "type": "header",
+            "params": {
+                "desc":"网易BoBo直播间",
+                "tid": "T1348648517839",
+            }
+        }
+    ]
+}

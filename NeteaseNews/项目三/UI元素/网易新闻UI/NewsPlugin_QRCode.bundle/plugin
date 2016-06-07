@@ -1,0 +1,14 @@
+{
+    "id": "QRCode",
+    "entries": [
+        {
+            "type":"sidebarBlock",
+            "params":{
+                "title":"扫一扫",
+                "icon":"icon",
+                "icon_setting":"icon_setting",
+                "class":"helper"
+            }
+        }
+    ]
+}

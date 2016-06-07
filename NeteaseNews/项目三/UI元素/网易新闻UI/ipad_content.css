@@ -1,0 +1,525 @@
+/*
+ global
+ */
+body{font-family:arial,sans-serif;margin: 0; font-weight:normal; padding:10 0 10 0;background-color:#ffffff;word-wrap: break-word;-webkit-user-select: none;}
+body.night{background-color:#222222}
+p{margin-top:0;margin-bottom:1em}
+*{-webkit-touch-callout: none; -webkit-tap-highlight-color: rgba(0,0,0,0.15);}
+.no_tc{-webkit-tap-highlight-color: rgba(0,0,0,0);}
+.cut{overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;}
+
+/*
+ title
+ */
+#title_section{padding:10 0 12 0;-webkit-user-select: text;}
+#title{padding: 0 20 0 20;color:#121212;font-size:30px; text-align: center;}
+#subtitle{padding: 0 20 0 20;color:#808080;font-size:12px;-webkit-user-select:text; text-align: center;}
+#subtitle a{color:#5191d2;text-decoration:none;}
+body.night #subtitle a{color:#2c5074;}
+
+/*文章标题下方的红色下划短线*/
+#readlinediv{
+    padding-bottom: 16px;
+    padding-top: 18px;
+}
+.redline{
+    display: block;
+    clear: both;
+    margin: auto;
+    width: 20px;
+    height: 1px;
+    background-color: #ff0000;
+}
+body.night .redline{background-color: #95221f;}
+
+body.night #title{color:#909090}
+body.night #subtitle{color:#5c5c5c}
+
+/*
+ attitude block（新闻时间线、各方言论、百科和延伸阅读等的标题样式）
+ */
+.H1{font-size:125%;line-height:130%;color:#1F1F1F;padding-top:0.1em;padding-bottom:0.1em}
+.H2{font-size:105%;line-height:130%;padding-top:0.1em;padding-bottom:0.1em;color:#1F1F1F;}
+.PRE, .END{padding:0px 0px 0px 9px;color:#808080;font-size:95%;line-height:140%;border-left:10px solid #E9E9E9;}
+/*.PRE{margin-top:-30px;margin-bottom:-10px;}*/
+.ext_header{margin-bottom: 0.5em;width:100%;-webkit-user-select: none;display:table;}
+.ext_title{line-height:1.5em;font-size:85%;white-space:nowrap;display:table-cell;color:#546998}
+.ext_border { display: table-cell;width:640px;}
+.ext_border > div{height:7px;border-color:#546988;opacity:0.3;border-style: solid; border-width: 1px 0px 0px 0px;margin-left:20px;}
+.ext_footer{-webkit-user-select: none; height:8px;border-color:#93a9dc;border-style: solid; border-width: 0px 0px 1px 1px;margin-top:8px;margin-left:32px;}
+.ext_content{color:#2c2c2c;font-size:90%;line-height: 155%;}
+.ext_content[year]{color:transparent;margin-bottom:0;}
+.ext_content p{margin-bottom:0.5em}
+.ext_content a{font-size:110%;}
+
+body.night .H1,body.night .H2{color:#AEB8C5;}
+body.night .PRE,body.night .END{color:#5c5c5c;border-left-color:#272727;}
+body.night .ext_footer,body.night .ext_border > div{border-color:#47698c;}
+body.night .ext_content{color:#828282;}
+body.night .ext_title{color:#3b496a;}
+body.night .ext_content a{color:#305377;}
+body.night .ext_border > div{color:#2c303a;}
+
+/*
+ body(新闻主体样式 body元素对应的class被指定为body_section)
+ */
+@media only screen and (orientation:landscape){
+    #body_section{
+        padding:6 72 6 72;
+    }
+    #body_section p,#body_section .PRE_padding{
+        padding:0 110 0 110;
+    }
+    #body_section .ext_header, #body_section .ext_footer {
+        padding:0 110 0 110;
+        width: -webkit-calc(100% - 220px);
+    }
+}
+
+@media screen and (orientation:portrait), screen and (max-width:768px) and (min-width:415px){
+    #body_section{
+        padding:6 40 6 40;
+    }
+    #body_section p,#body_section .PRE_padding{
+        padding:0 32 0 32;
+    }
+    #body_section .ext_header, #body_section .ext_footer {
+        padding:0 32 0 32;
+        width: -webkit-calc(100% - 64px);
+    }
+}
+
+/**/
+@media only screen and (max-width: 414px) {
+    #body_section{
+        padding:6 5 6 5;
+    }
+    #body_section p,#body_section .PRE_padding{
+        padding:0 10 0 10;
+    }
+    #body_section .ext_header, #body_section .ext_footer {
+        padding:0 10 0 10;
+        width: -webkit-calc(100% - 20px);
+    }
+    /* 加上#body_section是为了让该css更精准，在@media{}条件下生效 */
+    #body_section .ipad_image_bg, #body_section .ipad_video_bg{
+        background-image: url('');
+    }
+}
+
+
+#body_section{/*padding:6 40 6 40;*/color:#1f1f1f;overflow-x:hidden;-webkit-user-select: text;}
+#body_section[lang=zh]{text-align:justify;letter-spacing:-0.2px;-webkit-hyphenate-limit-after:1;-webkit-hyphenate-limit-before:1;-webkit-hyphens: auto;}
+/*#body_section[lang=zh]{line-height:200%;}*/
+/*#body_section[lang=en]{line-height:200%;}*/
+body.night #body_section{color:#909090;}
+
+#body_section.font_largex{font-size:27px; line-height:45px;}
+#body_section.font_largex .ext_border > div{
+    height:8px;
+}
+#body_section.font_large{font-size:18px; line-height:36px;}
+#body_section.font_large .ext_border > div{
+    height:5.5px;
+}
+#body_section.font_normal{font-size:16px; line-height:32px;}
+#body_section.font_normal .ext_border > div{
+    height:5px;
+}
+#body_section.font_small{font-size:14px; line-height:28px;}
+#body_section.font_small .ext_border > div{
+    height:4px;
+}
+
+
+.cma{margin-right:-0.6em;}
+.cmal{margin-left:-0.2em;}
+.cmal2{margin-left:-0.6em;}
+
+#body_section p>a,#body_section a.link,.ext_content a{color:#5191d2;text-decoration:none;}
+body.night #body_section p>a{color:#305377}
+/*
+ border link 带底框的链接，如 "查看原文" 之类的
+ */
+.border_link {text-decoration:none;color:#4682c5;font-size: 0.8em;display: inline-block;vertical-align: middle;padding: 0.25em 0.8em 0.25em 0.8em;height: 1.5em;line-height: 1.5em;border: 1px solid #d6e5f3; border-radius: 1em;margin-bottom: 0.45em;overflow: hidden;text-overflow:ellipsis;white-space:nowrap;max-width: 90%;-webkit-tap-highlight-color: rgba(0,0,0,0);}
+.border_link#hover{background-color:rgba(81,137,200,0.3)}
+.border_link span{display: inline-block;vertical-align: middle;width: 0.7em;height: 1.5em;background-image: url("contentview_linkarrow_blue@2x.png");background-repeat:no-repeat;background-position:50% 50%;background-size: 0.45em 0.9em;margin-left: 0.3em;}
+.border_link[light]{color: #2f9d84;background-color: rgba(122,191,175,0.1);}
+.border_link[light]#hover{background-color: rgba(122,191,175,0.3);}
+.border_link[light] span{background-image: url("contentview_linkarrow_green@2x.png")}
+
+body.night .border_link{border-color:#1e242a;}
+body.night .border_link{color:#305377;}
+
+/*
+ tag
+ */
+.tag{height:1.em;line-height:1.0em;position: absolute;right: 0;bottom: 8px;border: 0.5px solid #454545;border-radius:4px;padding:2px 3px;font-size:22px;line-height:22px;}
+body.night .tag{color:#7a7a7a;border:1px solid #7a7a7a;}
+
+/*
+ topics & relative links
+ */
+.section_header{position:relative;background-repeat: no-repeat;font-size:26px;color:#df3031;width:170px;height:68px;line-height:68px;padding-left:40px;z-index:1}
+.section_footer{margin: 0px 20px 20px 20px;}
+.section_body{background-color: #fcfcfc;margin: -68px 20px 0px 20px;padding: 68px 0px 0px 0px;border-style: solid;border-color: #dddddd;border-width: 0.5px;}
+.section ul{list-style: none;}
+.section ul li{overflow:hidden;border-top: 0.5px solid #e2e2e2}
+.section ul li .pluginimg .photo_big{width:100%;height:100%;background-image: url("cell_image_background@2x.png"); background-color:#e6e6e6;background-repeat:no-repeat;background-position:center;}
+.section ul li.first{border-top-color:transparent}
+.section ul li#hover{background-size:100%;background-repeat: x-repeat;background-position: left top;background-image: url("sidebar_cellhighlighted_bg@2x.png");}
+.section ul li a{overflow:hidden;text-overflow:ellipsis;/*white-space:nowrap;*/}
+
+body.night .section_header{color:#8c3030;}
+body.night .section_footer{background-color: transparent;}
+body.night .section_body{background-color: #262626;border-color: #2b2b2b}
+body.night .section ul li{ border-top-color:#1a1a1a;/*background-color:#1F2023*/}
+body.night .section ul li .pluginimg .photo_big{background-image: url("night_cell_image_background@2x.png"); background-color:#292929;}
+body.night .section ul li.first{border-top-color:transparent}
+body.night .section ul li#hover{ background-image: url("night_sidebar_cellhighlighted_bg@2x.png")}
+
+/*
+ 关键词
+ */
+.keywords_wrapper {}
+.keyword {float: left;margin-left: 0.70em;margin-top: 0.85em;font-size: 29px;}
+
+
+/*
+ photo
+ screen size改变时，循环获取并修改photo_big、video_big和audio_big的margin-left
+ */
+.photo_big,.audio_big{position:relative; background-size: 100%;background-repeat: no-repeat;-webkit-user-select: none; width:400px;height:378px;overflow: hidden;background-color: #e6e6e6;}
+.audio_big{height:238px;/*DOCIMAGE_BIGAUDIO_SIZE*/}
+.video_big{height:100%; width:100%; text-align: center; margin: 0 auto;/* background-image: url('news_content_image_bg@2x.png')*/; background-repeat: repeat; position:relative; -webkit-user-select: none; overflow: hidden;}/*16:9*/
+p.pdesc{font-size:13px;line-height:115%;color:#808080;clear:both;margin-top:22px; margin-bottom: 45px; text-align: center;}
+.photo_box{overflow:hidden;display:block;z-index:-1;color:#808080;text-decoration:none;-webkit-tap-highlight-color:inherit;}
+.photo_box img{opacity:0;-webkit-transition: opacity 250ms ease-out;}
+.photo_box img.loaded{opacity:1}
+.photo_box>span{padding:10px 0px 0 10px;display:block;font-size:24px;line-height:32px;text-align:left;}
+.photo_big .photo_box,.video_big .photo_box,.audio_big .photo_box{ margin: 0 auto; background-size: 100%; /*width:100%;height:100%;width:-webkit-calc(100% - 2px);height:-webkit-calc(100% - 2px);border:1px solid #e9e9e9;*/}
+.video_big .photo_box{display: inline-block; background-color: #000;}
+
+.logo{position:absolute;left:50%;top:50%;margin-left:-35;margin-top:-17;width:70;height:34;background-image:url("contentview_imagebg_logo@2x.png");background-size: 100%}
+.plus{position:absolute;right:0px;bottom:0px;background-size: 100%;z-index:1}
+.photo_big .plus{width:40px;height:26px;right:0px;bottom:0px;}
+.photo_big[photoset] .plus{background-image:url("ipad_news_content_photo_set_indicator@2x.png")}
+.photo_big[map] .plus{background-image:url("ipad_news_content_map_indicator@2x.png")}
+
+/*需要动态更换此处video_plus的size*/
+.video_plus{position:absolute;/*left:40px;bottom:40px;*/left:-webkit-calc(100% - 50px);bottom:-webkit-calc(100% - 50px); width:100px;height:100px;background-size: 100%;background-image: url("ipad_contentview_play@2x.png");background-repeat: no-repeat;z-index:1}
+.audio_big .video_plus{background-image: url("contentview_listen@2x.png");}
+.video_big .video_plus,.audio_big .video_plus,.ad_img .video_plus{position:absolute;left:50%;top:50%;margin-left:-37.5px;margin-top:-37.5px;width:75px; height:75px;}
+
+body.night .photo_big{background-color:#292929;color:#808080;}
+body.night .photo_big .photo_box,body.night .video_big .photo_box,body.night .audio_big .photo_box{background-color:#292929;}
+body.night p.pdesc{color:#5c5c5c}
+body.night .photo_box img.loaded{opacity:0.5}
+body.night .photo_big[photoset] .plus{opacity:0.5}
+body.night .video_plus{opacity:0.5}
+body.night .logo{background-image:url("night_contentview_imagebg_logo@2x.png")}
+
+/*
+ plugin
+ */
+/*.pluginbox{display: block;height: 170px;position:relative;line-height: 36px}*/
+body.night .pluginbox{background-image:url('news_content_image_bg_night@2x.png');}
+.pluginbox{display: block;height: 284px;position:relative;line-height: 36px;overflow: hidden;background-image:url('news_content_image_bg@2x.png');background-size: 3px 3px;background-repeat: repeat;}
+/*.plugin {display:block;margin: 0 auto; width:580px; height:100%; -webkit-user-select: none;border-width:1px;border-style:dashed;border-color: #9f9f9f;padding: 8px}*/
+.plugin {
+    display:block;
+    margin-top:64px;
+    margin-right: auto;
+    margin-left: auto;
+    width:518px;
+    max-width:-webkit-calc(100% - 12px);
+    height:158px;
+    background-color: #FFFFFF;
+    -webkit-user-select: none;
+}
+.plugin#hover {background-color: #e6e6e6}/*选中状态时的背景颜色*/
+.pluginimg{position: relative;float:left;width: 158px;height: 158px;}
+.plugin .photo_big{width: 100%;height: 100%;overflow: none; background-image: url("contentview_image_default@2x.png");}
+.plugin .title{
+    float: left;
+    display: block;
+    margin:36px 0 0 16px;
+    width:390px;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow:hidden;
+    font-size:32px;
+    height:40px;
+    line-height: 40px;
+}
+.plugin .subtitle{
+    float:left;
+    display:block;
+    margin: 8px 0 0 14px;
+    font-size:24px;
+    line-height: 28px;
+    height:44px;
+    color:#808080;
+    width:400px;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow:hidden;
+}
+.plugin img{width: 100%;height: 100%}
+.plugin p.pdesc{clear:none;}
+
+body.night .plugin{border-color: #545454}
+body.night .plugin#hover {background-color: #141414;}
+body.night .plugin .photo_big{background-image: url("night_contentview_image_default@2x.png");}
+body.night .plugin .subtitle{color:#909090}
+body.night .plugin .arrow{background-image: url("night_settingcell_arrow@2x.png");}
+
+/*
+ plugin Link
+ */
+.plugin .title[multi]{width:360px;height: 80px;white-space: normal;}
+
+/*
+ plugin圆角
+ */
+.plugin[roundIcon] .photo_big{ position: absolute ;right: 0;left: 0;top: 0;bottom: 0;margin:auto;border-radius: 50%;-webkit-box-shadow:none;}
+.plugin[roundIcon][haveborder] .pluginimg{border-radius: 50%;border-width: 1;border-style: solid;border-color: #e6e6e6}
+.plugin[roundIcon][haveborder][coloredborder] .pluginimg{border-color: #f79ed0}
+
+.plugin[roundIcon] .photo_box img{border-radius:50%}
+.plugin[roundIcon][haveborder] .photo_big{width: 140px;height: 140px}
+
+body.night .plugin[roundIcon][haveborder] .pluginimg{border-color: #404040}
+body.night .plugin[roundIcon][haveborder][coloredborder] .pluginimg{border-color: #571b3d}
+
+
+/************************iPad NBA 直播*********************************/
+body.night .plugin {
+    background-color:#aaaaaa;
+}
+.plugininfo{
+    float:left;
+    width:-webkit-calc(100% - 180px);
+}
+
+.plugininfo .ipad_team{
+    margin-top:40px;
+    margin-left:-webkit-calc(50% - 135px);
+    width:270px;
+    height:34px;
+    font-size:17px;
+    line-height:34px;
+}
+.plugininfo .left{
+    text-align:right;
+    float:left;
+    width:33.3%;
+}
+.plugininfo .vs{
+    float:left;
+    width:33.3%;
+}
+.plugininfo .ipad_rate .vs{
+    text-align:center;
+}
+.plugininfo .ipad_team .vs img{
+    margin-left:-webkit-calc(50% - 17.5px);
+    margin-top:5px;
+    width:35px;
+    height:24px;
+}
+.plugininfo .right{
+    float:left;
+    width:33.3%;
+}
+
+.plugin .ipad_rate{
+    float:left;
+    
+    margin-left:-webkit-calc(50% - 135px);
+    margin-top:-6px;
+    width:270px;
+    
+    font-size:39px;
+    line-height: 56px;
+    color:#5e5f61;
+    font-weight:bold;
+    overflow:hidden;
+}
+
+.plugin .ipad_arrow{
+    float: left;
+    margin-top:63px;
+    height:28px;
+    width:14px;
+    background-size: 100%;
+    background-image:url("settingcell_arrow@2x.png");
+}
+
+.plugin .ipad_title{
+    font-size:20px;
+    line-height:34px;
+    height: 34px;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-top:36px;
+    margin-left:28px;
+    color:#313131;
+}
+
+.plugin .ipad_subtitle{
+    margin-top:5px;
+    margin-left:28px;
+    font-size:14px;
+    line-height:24px;
+    color:#707070;
+    
+    display:-webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    overflow:hidden;
+}
+
+
+/*********************************************************/
+/*
+ <table/>
+ */
+table {border-width: 1px;border-color: #E4E4E4;border-collapse: collapse;width:100%;}
+th {border-width: 1px;padding: 12px 6px;border-style: solid;background-color: #F0F0F0;font-weight:normal;font-size:16px;}
+td {border-width: 1px;padding: 12px 6px;border-style: solid;text-align:center;font-size:18px;}
+tr:nth-child(odd){ background-color:#FFFFFF; }
+tr:nth-child(even){ background-color:#F8F8F8; }
+
+body.night table{opacity: 0.5;}
+
+body.night .ipad_image_bg{
+    background-image: url('news_content_image_bg_night@2x.png');
+}
+
+.ipad_image_bg {
+    background-image: url('news_content_image_bg@2x.png');
+    background-size: 3px 3px;
+    background-repeat: repeat;
+    width:100%;
+    /*    width:-webkit-calc(100% - 40px);*/
+    /*    margin-left:20px;*/
+    /*    margin-left:10%;*/
+    /*    height:100px;*/
+}
+body.night .ipad_video_bg{
+    background-image: url('news_content_image_bg_night@2x.png');
+}
+
+.ipad_video_bg {
+    background-image: url('news_content_image_bg@2x.png');
+    background-size: 3px 3px;
+    background-repeat: repeat;
+    width:100%;
+}
+
+/* ipad audio */
+@media screen and (max-width: 414px) {
+    #body_section .ipad_audio {
+        background-image: url('');
+        padding: 10px auto;
+    }
+    #body_section .ipad_audio a {
+        max-width: 90%;
+        left: 5%;
+        border: 0.5px #e7e7e7 solid;
+    }
+    #body_section .ipad_audio .audio_cover {
+        margin-left: 0px;
+    }
+    #body_section .ipad_audio .audio_title {
+        /*margin-left: 10px;*/
+        left: 72px;
+        max-width: -webkit-calc(100% - 70px);
+    }
+}
+@media screen and (max-width:600px) and (min-width:415px){
+    #body_section .ipad_audio a {
+        max-width: 80%;
+        left: 10%;
+    }
+}
+
+.ipad_audio {
+    background-image: url('news_content_image_bg@2x.png');
+    background-size: 3px 3px;
+    background-repeat: repeat;
+    position: relative;
+    width: 100%;
+    height: 116px;
+    
+    padding-top: 18px;
+    padding-bottom: 18px;
+    box-sizing: border-box;
+}
+
+body.night .ipad_audio {
+    background-image: url('news_content_image_bg_night@2x.png');
+}
+
+.ipad_audio a {
+    position:relative;
+    display: block;
+    width: 426px;
+    height: 100%;
+    background: #fff;
+    left: -webkit-calc(50% - 213px);
+    
+    padding: 10px 22px;
+    box-sizing: border-box;
+}
+
+body.night .ipad_audio a {
+    background-color:#292929;
+}
+
+.ipad_audio .audio_cover {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background-size: 60px 60px;
+    border-radius: 100%;
+    
+    padding-top: 12px;
+    padding-left: 12px;
+    box-sizing: border-box;
+}
+
+body.night .ipad_audio .audio_cover {
+    opacity:0.5
+}
+
+.ipad_audio .audio_icon{
+    display:inline-block;
+    background-image: url('ipad_news_content_audio_icon@2x.png');
+    background-size: 36px 36px;
+    width: 36px;
+    height: 36px;
+    border-radius: 100%;
+}
+
+.ipad_audio .audio_title {
+    position:relative;
+    display:block;
+    left: 82px;
+    top: -40px;
+    line-height: 20px;
+    width: -webkit-calc(100% - 90px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    
+    font-size:15px;
+    color: #6f6f6f;
+}
+
+.ipad_audio a {
+    text-decoration: none;
+}
